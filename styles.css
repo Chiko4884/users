@@ -1,0 +1,124 @@
+
+body {
+    font-family:'Lucida Sans', sans-serif;
+    background-color: #d1dada;
+    background-image: url('./bg.jpg');
+}
+
+
+
+
+.title{
+    text-align: center;
+}
+.head{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.sort-filter{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.btn{
+    width: 500px;
+    height: 50px;
+    font-size: 20px;
+    color: blue;
+    font-family: 'Arial', sans-serif;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 5px;
+    background-color: #c7c7cdc1;
+    cursor: pointer;
+    border: solid 1px rgb(6, 54, 164);
+}
+.inp{
+    width: 500px;
+    height: 40px;
+    font-size: 20px;
+    color: blue;
+    font-family: 'Arial', sans-serif;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 3px;
+    background-color: #c7c7cdc1;
+    border: solid 1px rgb(216, 220, 230);
+}
+
+.btn:disabled{
+    color: rgb(108, 110, 112);
+    border:none;
+}
+
+
+/* в виде карточек */
+#user-container {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.user-card {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    width: 220px;
+    max-height: 200px;
+    border-radius: 25px;
+    background-color: rgba(52, 153, 211, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+/* в виде таблицы */
+#user-table {
+    display: none;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#user-table th, #user-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    font-family:'Lucida Sans', sans-serif;
+    font-size: 18px;
+    background-color: rgba(52, 153, 211, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+
+@media only screen and (max-width: 600px) {
+ 
+    #user-table {
+        border: 0;
+    }
+
+    #user-table thead {
+        display: none;
+    }
+
+    #user-table tr {
+        display: block;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #ddd;
+
+    }
+
+    #user-table td {
+        display: block;
+        border-bottom: 1px dotted #ccc;
+        text-align: left;
+    }
+
+    #user-table td::before {
+        content:attr(data-label);
+        float: left;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}
+

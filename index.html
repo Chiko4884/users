@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Приложение для отображения пользователей</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1 class="title">Данные пользователей</h1>
+    <section>
+        <div class="head">
+
+            <select id="display-mode" class="btn">
+                <option value="no">Выбрать</option>
+                <option value="table">В виде таблицы</option>
+                <option value="cards">В виде карточек</option>
+            </select>
+
+            <button id="refresh-cards" class="btn">Обновить карточки</button>
+            <button id="refresh-table" class="btn">Обновить таблицу</button>
+
+
+        </div>
+        <hr/>
+        <div class="sort-filter">
+            <select id="sort-parameter" class="btn">
+                <option value="">Без сортировки</option>
+                <option value="name">Имя</option>
+                <option value="email">Email</option>
+            </select>
+
+            <input type="text" id="filter-input" placeholder="Введите критерий фильтрации" class="inp">
+            <button id="filter-button" class="btn" disabled>Фильтровать</button>
+        </div>
+
+        <div id="user-container"></div>
+
+        <table id="user-table">
+            <thead>
+                <tr>
+                    <th data-label="Имя">Имя</th>
+                    <th data-label="Email">Email</th>
+                    <th data-label="Телефон">Телефон</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <div id="empty">
+            <h1>Ничего не выбрано!</h1>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
